@@ -11,19 +11,22 @@ public class ATM {
 	public static void main(String []args) {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int input = 0;
-		System.out.print("Scegli Saldo: ");
+		System.out.print("Choose the Balance: ");
 		try {
 			saldo = Double.parseDouble(br.readLine());
-			System.out.println("1: Accedi");
-			System.out.println("2: Esci");
-			System.out.print("Effettua scelta: ");
+			System.out.println("1: Log-in");
+			System.out.println("2: Exit");
+			System.out.print("Make Your Choice: ");
 			input = Integer.parseInt(br.readLine());
 			if(input > 2) {
-				System.out.println("Valore non valido.");
+				System.out.println("Invalid value, please retry.");
 			} else {
 				switch(input) {
 				case 1:
 					Conto.accessoConto();
+				case 2:
+					System.out.println("Come back soon, good bye!");
+					break;
 				}
 			}
 			
